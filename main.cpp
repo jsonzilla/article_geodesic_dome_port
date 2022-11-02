@@ -1,7 +1,9 @@
 #include <GL/gl.h>
 #include <GL/glu.h>
 #include <GL/glut.h>
-#include <windows.h>
+#ifdef WIN32
+    #include <windows.h>
+#endif
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -186,7 +188,7 @@ int main(int argc, char** argv)
         glEnable(GL_AUTO_NORMAL);
         glEnable(GL_NORMALIZE);
 
- 
+
     }
 
     glEnable(GL_TEXTURE_2D);
@@ -213,10 +215,10 @@ int main(int argc, char** argv)
 
 void funkarInte1()
 {
-    ObjectFN *nyobj1 = World::addObjectFN(OBJ_DODECAHEDRON, Vec(0, 0, 0), Vec(1, 1, 1)*1.5, Mat(1,0,0, 0,1,0, 0,0,1));   
-    //ObjectFN *nyobj1 = World::addObjectFN(OBJ_ICOSIDODECAHEDRON, Vec(0, 0, 0), Vec(1, 1, 1)*1.0, Mat(1,0,0, 0,1,0, 0,0,1));   
-    //ObjectFN *nyobj1 = World::addObjectFN(OBJ_ICOSIDODECAHEDRON, Vec(0, 0, 0), Vec(1, 1, 1)*1, Mat(1,0,0, 0,1,0, 0,0,1)); 
-    //ObjectFN *nyobj1 = World::addObjectFN(OBJ_CUBOCTAHEDRON, Vec(0, 0, 0), Vec(1, 1, 1)*1, Mat(1,0,0, 0,1,0, 0,0,1)); 
+    ObjectFN *nyobj1 = World::addObjectFN(OBJ_DODECAHEDRON, Vec(0, 0, 0), Vec(1, 1, 1)*1.5, Mat(1,0,0, 0,1,0, 0,0,1));
+    //ObjectFN *nyobj1 = World::addObjectFN(OBJ_ICOSIDODECAHEDRON, Vec(0, 0, 0), Vec(1, 1, 1)*1.0, Mat(1,0,0, 0,1,0, 0,0,1));
+    //ObjectFN *nyobj1 = World::addObjectFN(OBJ_ICOSIDODECAHEDRON, Vec(0, 0, 0), Vec(1, 1, 1)*1, Mat(1,0,0, 0,1,0, 0,0,1));
+    //ObjectFN *nyobj1 = World::addObjectFN(OBJ_CUBOCTAHEDRON, Vec(0, 0, 0), Vec(1, 1, 1)*1, Mat(1,0,0, 0,1,0, 0,0,1));
     //nyobj1->print();
     cout << "rectifyar" << endl;
     nyobj1->rectify();
